@@ -1,12 +1,13 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:rive/rive.dart';
 
 class AppArenaController extends GetxController {
-  late Artboard artboard;
+  Artboard? artboard;
   StateMachineController? stateMachineController;
+  SMIInput<bool>? trigger1Input;
+  SMIInput<bool>? trigger2Input;
+  SMIInput<bool>? trigger3Input;
 
   @override
   void onInit() {
@@ -15,15 +16,18 @@ class AppArenaController extends GetxController {
   }
 
   void loadRiveFile() async {
-    final data = await rootBundle.load('rive_assets/trial.riv');
+    final data = await rootBundle.load('assets/rive_assets/trial.riv');
     final file = RiveFile.import(data);
     artboard = file.mainArtboard;
     stateMachineController = StateMachineController.fromArtboard(
-      artboard,
+      artboard!,
       'State Machine 1',
     );
     if (stateMachineController != null) {
-      artboard.addController(stateMachineController!);
+      artboard!.addController(stateMachineController!);
+      trigger1Input = stateMachineController!.findInput<bool>('Trigger 1');
+      trigger2Input = stateMachineController!.findInput<bool>('Trigger 2');
+      trigger3Input = stateMachineController!.findInput<bool>('Trigger 3');
     } else {
       print('State Machine 1 not found in the Rive file');
     }
@@ -31,16 +35,18 @@ class AppArenaController extends GetxController {
   }
 
   void trigger1() {
-    stateMachineController?.findInput<bool>('Trigger 1')?.value = true;
+    trigger1Input?.value = true;
   }
 
   void trigger2() {
-    stateMachineController?.findInput<bool>('Trigger 2')?.value = true;
+    trigger2Input?.value = true;
   }
 
   void trigger3() {
-    stateMachineController?.findInput<bool>('Trigger 3')?.value = true;
+    trigger3Input?.value = true;
   }
 
-  // Add methods for other triggers as needed
+  void onStarClicked() {
+    trigger1();
+  }
 }
