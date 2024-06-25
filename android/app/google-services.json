@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "701034279451",
+    "project_id": "gbsheet",
+    "storage_bucket": "gbsheet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701034279451:android:d71de4be7ce533bece3ebe",
+        "android_client_info": {
+          "package_name": "com.arrijal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfgXkASJ6hpc4fz4867nPeG-yiIbMoF2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
