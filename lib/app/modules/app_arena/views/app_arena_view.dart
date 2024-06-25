@@ -9,16 +9,12 @@ class AppArenaView extends GetView<AppArenaController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AppArenaView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'AppArenaView is working',
-          style: TextStyle(fontSize: 20),
+        appBar: AppBar(
+          title: const Text('AppArenaView'),
+          centerTitle: true,
         ),
-      ),
-    );
+        body: const Stack(
+          children: [],
+        ));
   }
 }
