@@ -27,12 +27,17 @@ class HomeView extends GetView<HomeController> {
                 onPressed: () {
                   Get.toNamed(Routes.APP_ARENA);
                 },
-                child: const Text('AppArena')),
+                child: const Text('AppArena1')),
             ElevatedButton(
                 onPressed: () {
                   Get.toNamed(Routes.MACOS_ARENA);
                 },
                 child: const Text('MacOSArena')),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(Routes.APP2);
+                },
+                child: const Text('AppArena2')),
           ],
         ),
       ),
