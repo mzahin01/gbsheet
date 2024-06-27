@@ -38,6 +38,11 @@ class HomeView extends GetView<HomeController> {
                   Get.toNamed(Routes.APP2);
                 },
                 child: const Text('AppArena2')),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(Routes.KAJ_KORE);
+                },
+                child: const Text('Kaj Kore')),
           ],
         ),
       ),

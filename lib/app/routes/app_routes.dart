@@ -10,6 +10,7 @@ abstract class Routes {
   static const APP_ARENA = _Paths.APP_ARENA;
   static const MACOS_ARENA = _Paths.MACOS_ARENA;
   static const APP2 = _Paths.APP2;
+  static const KAJ_KORE = _Paths.KAJ_KORE;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const APP_ARENA = '/app-arena';
   static const MACOS_ARENA = '/macos-arena';
   static const APP2 = '/app2';
+  static const KAJ_KORE = '/kaj_kore';
 }

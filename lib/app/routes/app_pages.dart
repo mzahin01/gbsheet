@@ -1,3 +1,4 @@
+import 'package:gbsheet/app/modules/kaj_kore.dart';
 import 'package:get/get.dart';
 
 import '../modules/app2/bindings/app2_binding.dart';
@@ -45,6 +46,10 @@ class AppPages {
       name: _Paths.APP2,
       page: () => const App2View(),
       binding: App2Binding(),
+    ),
+    GetPage(
+      name: _Paths.KAJ_KORE,
+      page: () => const CopyBilai(),
     ),
   ];
 }

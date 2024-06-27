@@ -1,4 +1,3 @@
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:rive/rive.dart';
 
@@ -7,12 +6,12 @@ class App2Controller extends GetxController {
   StateMachineController? stateMachineController;
   SMIInput<bool>? trigger1Input;
 
-  @override
-  void onInit() {
-    super.onInit();
-    // loadRiveFile();
-    onRiveInit(artboard!);
-  }
+  // @override
+  // void onInit() {
+  //   super.onInit();
+  //   // loadRiveFile();
+  //   onRiveInit(artboard!);
+  // }
 
   void onRiveInit(Artboard artboard) {
     final controller = StateMachineController.fromArtboard(
