@@ -20,13 +20,17 @@ class App2View extends GetView<App2Controller> {
               child: Column(
                 children: [
                   Expanded(
-                    child: Rive(artboard: controller.artboard!),
+                    child: RiveAnimation.asset(
+                      'assets/copybilai.riv',
+                      fit: BoxFit.cover,
+                      onInit: controller.onRiveInit,
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ElevatedButton(
-                        onPressed: () => controller.trigger1(),
+                        onPressed: () {},
                         child: const Text('Trigger 1'),
                       ),
                     ],
