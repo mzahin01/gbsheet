@@ -26,11 +26,11 @@ class _CopyBilaiCopyState extends State<CopyBilaiCopy> {
       body: Stack(
         children: [
           Center(
-            child: Container(
-              color: Colors.blue,
+            child: SizedBox(
+              height: 300,
+              width: 300,
               child: RiveAnimation.asset(
                 'assets/rive_assets/trial.riv',
-                fit: BoxFit.cover,
                 onInit: _onRiveInit,
               ),
             ),
