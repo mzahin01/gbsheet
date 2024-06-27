@@ -11,6 +11,8 @@ abstract class Routes {
   static const MACOS_ARENA = _Paths.MACOS_ARENA;
   static const APP2 = _Paths.APP2;
   static const KAJ_KORE = _Paths.KAJ_KORE;
+  static const SKILL_MACHINE = _Paths.SKILL_MACHINE;
+  static const SKILL_MACHINE_GETX = _Paths.SKILL_MACHINE_GETX;
 }
 
 abstract class _Paths {
@@ -21,4 +23,6 @@ abstract class _Paths {
   static const MACOS_ARENA = '/macos-arena';
   static const APP2 = '/app2';
   static const KAJ_KORE = '/kaj_kore';
+  static const SKILL_MACHINE = '/skill';
+  static const SKILL_MACHINE_GETX = '/skill-machine-getx';
 }

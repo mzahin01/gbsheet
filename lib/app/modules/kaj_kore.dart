@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
-/// Basic skinning example. The skinning states is set in the Rive editor and
-/// triggers are used to change the value.
 class CopyBilai extends StatefulWidget {
   const CopyBilai({super.key});
 
@@ -15,16 +13,9 @@ class _CopyBilaiState extends State<CopyBilai> {
     final controller = StateMachineController.fromArtboard(
       artboard,
       'State Machine 1',
-      // onStateChange: _onStateChange,
     );
     artboard.addController(controller!);
   }
-
-  // void _onStateChange(String stateMachineName, String stateName) {
-  //   // if (stateName.contains("Skin_")) {
-  //   setState(() {});
-  //   // }
-  // }
 
   @override
   Widget build(BuildContext context) {

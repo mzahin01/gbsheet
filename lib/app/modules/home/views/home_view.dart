@@ -43,6 +43,16 @@ class HomeView extends GetView<HomeController> {
                   Get.toNamed(Routes.KAJ_KORE);
                 },
                 child: const Text('Kaj Kore')),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(Routes.SKILL_MACHINE);
+                },
+                child: const Text('Skill Machine')),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(Routes.SKILL_MACHINE_GETX);
+                },
+                child: const Text('Skill Machine Getx')),
           ],
         ),
       ),

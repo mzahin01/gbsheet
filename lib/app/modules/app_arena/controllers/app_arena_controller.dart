@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:rive/rive.dart';
 
 class AppArenaController extends GetxController {
-  Artboard? artboard;
+  Rx<Artboard?> artboard = Rx(null);
   StateMachineController? stateMachineController;
   SMIInput<bool>? trigger1Input;
   SMIInput<bool>? trigger2Input;
@@ -20,20 +20,20 @@ class AppArenaController extends GetxController {
   void loadRiveFile() async {
     final data = await rootBundle.load('assets/rive_assets/trial.riv');
     final file = RiveFile.import(data);
-    artboard = file.mainArtboard;
+    Artboard a = file.mainArtboard;
     stateMachineController = StateMachineController.fromArtboard(
-      artboard!,
+      a,
       'State Machine 1',
     );
     if (stateMachineController != null) {
-      artboard!.addController(stateMachineController!);
+      a.addController(stateMachineController!);
       trigger1Input = stateMachineController!.findInput<bool>('Trigger 1');
       trigger2Input = stateMachineController!.findInput<bool>('Trigger 2');
       trigger3Input = stateMachineController!.findInput<bool>('Trigger 3');
     } else {
       print('State Machine 1 not found in the Rive file');
     }
-    update(); // Call update to refresh UI after loading the Rive file
+    artboard.value = a;
   }
 
   void trigger1() {

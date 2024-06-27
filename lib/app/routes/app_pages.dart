@@ -1,4 +1,3 @@
-import 'package:gbsheet/app/modules/kaj_kore.dart';
 import 'package:get/get.dart';
 
 import '../modules/app2/bindings/app2_binding.dart';
@@ -7,8 +6,12 @@ import '../modules/app_arena/bindings/app_arena_binding.dart';
 import '../modules/app_arena/views/app_arena_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/kaj_kore.dart';
 import '../modules/macos_arena/bindings/macos_arena_binding.dart';
 import '../modules/macos_arena/views/macos_arena_view.dart';
+import '../modules/skill_machine.dart';
+import '../modules/skill_machine_getx/bindings/skill_machine_getx_binding.dart';
+import '../modules/skill_machine_getx/views/skill_machine_getx_view.dart';
 import '../modules/web_page_arena/bindings/web_page_arena_binding.dart';
 import '../modules/web_page_arena/views/web_page_arena_view.dart';
 
@@ -50,6 +53,15 @@ class AppPages {
     GetPage(
       name: _Paths.KAJ_KORE,
       page: () => const CopyBilai(),
+    ),
+    GetPage(
+      name: _Paths.SKILL_MACHINE,
+      page: () => const StateMachineSkills(),
+    ),
+    GetPage(
+      name: _Paths.SKILL_MACHINE_GETX,
+      page: () => const SkillMachineGetxView(),
+      binding: SkillMachineGetxBinding(),
     ),
   ];
 }
