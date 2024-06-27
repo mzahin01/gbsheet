@@ -8,38 +8,19 @@ class App2View extends GetView<App2Controller> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Rive Animation with GetX')),
-      body: GetBuilder<App2Controller>(
-        init: App2Controller(),
-        builder: (controller) {
-          if (controller.artboard == null) {
-            return const Center(child: CircularProgressIndicator());
-          } else {
-            return Container(
-              color: Colors.transparent,
-              child: Column(
-                children: [
-                  Expanded(
-                    child: RiveAnimation.asset(
-                      'assets/copybilai.riv',
-                      fit: BoxFit.cover,
-                      onInit: controller.onRiveInit,
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: const Text('Trigger 1'),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            );
-          }
-        },
+      appBar: AppBar(
+        title: const Text('Skinning Demo'),
+      ),
+      body: Stack(
+        children: [
+          Center(
+            child: RiveAnimation.asset(
+              'assets/rive_assets/copybilai.riv',
+              fit: BoxFit.cover,
+              onInit: controller.onRiveInit,
+            ),
+          ),
+        ],
       ),
     );
   }
