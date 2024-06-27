@@ -58,6 +58,11 @@ class HomeView extends GetView<HomeController> {
                   Get.toNamed(Routes.COPY_BILAI_COPY);
                 },
                 child: const Text('Woking Star')),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(Routes.ANOTHER_PAGE);
+                },
+                child: const Text('Another Page')),
           ],
         ),
       ),

@@ -14,6 +14,7 @@ abstract class Routes {
   static const SKILL_MACHINE = _Paths.SKILL_MACHINE;
   static const SKILL_MACHINE_GETX = _Paths.SKILL_MACHINE_GETX;
   static const COPY_BILAI_COPY = _Paths.COPY_BILAI_COPY;
+  static const ANOTHER_PAGE = _Paths.ANOTHER_PAGE;
 }
 
 abstract class _Paths {
@@ -27,4 +28,5 @@ abstract class _Paths {
   static const SKILL_MACHINE = '/skill';
   static const SKILL_MACHINE_GETX = '/skill-machine-getx';
   static const COPY_BILAI_COPY = '/CopyBilaiCopy';
+  static const ANOTHER_PAGE = '/another-page';
 }

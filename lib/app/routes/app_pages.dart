@@ -1,10 +1,12 @@
-import 'package:gbsheet/app/modules/copybilai_copy.dart';
 import 'package:get/get.dart';
 
+import '../modules/another_page/bindings/another_page_binding.dart';
+import '../modules/another_page/views/another_page_view.dart';
 import '../modules/app2/bindings/app2_binding.dart';
 import '../modules/app2/views/app2_view.dart';
 import '../modules/app_arena/bindings/app_arena_binding.dart';
 import '../modules/app_arena/views/app_arena_view.dart';
+import '../modules/copybilai_copy.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/kaj_kore.dart';
@@ -67,6 +69,11 @@ class AppPages {
     GetPage(
       name: _Paths.COPY_BILAI_COPY,
       page: () => const CopyBilaiCopy(),
+    ),
+    GetPage(
+      name: _Paths.ANOTHER_PAGE,
+      page: () => const AnotherPageView(),
+      binding: AnotherPageBinding(),
     ),
   ];
 }
