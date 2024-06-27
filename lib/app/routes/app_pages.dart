@@ -1,3 +1,4 @@
+import 'package:gbsheet/app/modules/copybilai_copy.dart';
 import 'package:get/get.dart';
 
 import '../modules/app2/bindings/app2_binding.dart';
@@ -62,6 +63,10 @@ class AppPages {
       name: _Paths.SKILL_MACHINE_GETX,
       page: () => const SkillMachineGetxView(),
       binding: SkillMachineGetxBinding(),
+    ),
+    GetPage(
+      name: _Paths.COPY_BILAI_COPY,
+      page: () => const CopyBilaiCopy(),
     ),
   ];
 }
